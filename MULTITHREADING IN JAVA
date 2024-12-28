@@ -1,0 +1,29 @@
+//INPUT
+class Atr implements Runnable{
+    public void run(){
+        for (int i =0;i<=5; i++){
+            System.out.println("My Child Thread");
+        }
+    }
+}
+class B{
+    public static void main(String[] args){
+        Atr r=new Atr();
+        Thread t=new Thread(r);
+        t.run();
+        for(int i=0; i<=5; i++){
+            System.out.println("main Thread");
+        }
+    }
+}
+//OUTPUT
+My Child Thread
+My Child Thread
+My Child Thread
+My Child Thread
+main Thread
+main Thread
+main Thread
+main Thread
+main Thread
+main Thread
